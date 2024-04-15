@@ -1,30 +1,16 @@
 import React from 'react'
-
-function Home() {
+import {Link} from 'react-router-dom'
+const Home = () => {
   return (
-    <div className='flex flex-col items-center justify-center'>
-        <form>
-        <h1 className='mb-4 mt-8 font-bold text-1xl'>Add Contact</h1>
-        <label>Full name</label><br></br>
-        <input type="text" placeholder='Enter your names' className='w-96 h-12 border-2 pl-2'
-          onChange={e => setFullName(e.target.value)}></input><br></br>
+    <div class="flex justify-center items-center h-screen">
+  <div class="text-center">
+    <h1 class="text-3xl font-bold mb-4">Welcome to your Contact</h1>
 
-
-        <label>Email</label><br></br>
-        <input type="text" placeholder='Enter your E-mail' className='w-96 h-12 border-2 pl-2'
-          onChange={e => setEmail(e.target.value)}></input><br></br>
-
-        <label>Phone</label><br></br>
-        <input type="text" placeholder='Enter your Phone number' className='w-96 h-12 border-2 pl-2'
-          onChange={e => setPhone(e.target.value)}></input><br></br>
-        <label for="picture" >Picture</label><br></br>
-        <input type="file" id="picture" name="picture" accept="image/*" className='w-96 h-12 border-2 pl-2'
-          onChange={e => setPhone(e.target.value)}></input><br></br>
-
-    
-        <button className='w-96 h-12 border-2 mt-4 bg-black text-white' onClick={addContact}>Create</button>
-      </form>
-    </div>
+    <Link  to="/create">
+    <button class="px-4 py-2 text-blue-500 underline hover:text-blue-600 focus:outline-none">Add New</button>
+    </Link>
+  </div>
+</div>
   )
 }
 

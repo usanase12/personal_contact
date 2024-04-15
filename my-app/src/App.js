@@ -1,25 +1,21 @@
 import React from 'react'
 import Footer from './components/footer'
 import Header from './components/header'
+import Create from './pages/create'
+import Home from './pages/home'
+import{BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className='px-4 flex flex-col'>
-      <div className='container'>
-
-       <Header/>
-      {/* <BrowserRouter>
-      <Routes>
-          {/* <Route path="/" element={<Table />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/update/:contId" element={<Update />}></Route> */}
-          {/* <Route path="/details/:contactId" element={<More />}></Route>
-          */}
-        {/* </Routes>
-      </BrowserRouter> */} 
-      
-  </div>
-    <Footer/>
+    <div>
+      <BrowserRouter>
+      <Header/>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/create" element={<Create/>} />
+    </Routes>
+      <Footer/>
+      </BrowserRouter>
     </div>
   )
 }
